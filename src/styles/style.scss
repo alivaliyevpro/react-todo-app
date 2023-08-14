@@ -1,0 +1,173 @@
+@import "../components/Header/header";
+@import "../components/TodoInput/todoInput";
+@import "../components/TodoList/todoList";
+@import "../components/TodoItem/todoItem.scss";
+@import "../components/TodosFilterControl/todosFilterControl.scss";
+@import "../variables/variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $ff;
+  font-size: 18px;
+  outline: none;
+}
+
+.container {
+  height: 100vh;
+  overflow: scroll;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.dark {
+    background-image: url(../images/bg-desktop-dark.jpg);
+    background-color: $very-dark-blue;
+  }
+
+  &.light {
+    background-image: url(../images/bg-desktop-light.jpg);
+    background-color: $very-light-gray;
+  }
+}
+
+main {
+  width: 30rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.light {
+  .form-control {
+    background-color: $white;
+
+    input {
+      color: $very-dark-grayish-blue;
+    }
+  }
+
+  .todo {
+    background-color: $white;
+    border-bottom: 1px solid $border-color-light;
+
+    p {
+      &.true {
+        color: $light-grayish-blue;
+      }
+      &.false {
+        color: $dark-grayish-blue;
+      }
+    }
+  }
+
+  .controls-container {
+    background-color: $white;
+  }
+
+  button:hover {
+    color: $very-dark-grayish-blue;
+  }
+
+  .controls-mobile {
+    background-color: $white;
+  }
+
+  .todos-container {
+    .todos {
+      box-shadow: 0px 100px 90px 30px rgba(0, 0, 0, 0.1);
+      -webkit-box-shadow: 0px 100px 90px 30px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 100px 90px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .empty-list {
+      background-color: $white;
+      color: $very-dark-grayish-blue;
+      border-bottom: 1px solid $border-color-light;
+    }
+  }
+}
+
+.dark {
+  .form-control {
+    background-color: $very-dark-desaturated-blue;
+
+    input {
+      color: $light-grayish-blue;
+    }
+  }
+
+  .todo {
+    background-color: $very-dark-desaturated-blue;
+    border-bottom: 1px solid $border-color;
+    p {
+      &.true {
+        color: $very-dark-grayish-blue;
+      }
+      &.false {
+        color: $dark-grayish-blue;
+      }
+    }
+  }
+
+  .controls-container {
+    background-color: $very-dark-desaturated-blue;
+  }
+
+  .controls-mobile {
+    background-color: $very-dark-desaturated-blue;
+  }
+
+  .todos-container {
+    .todos {
+      box-shadow: 0px 99px 80px 33px rgba(0, 0, 0, 0.51);
+      -webkit-box-shadow: 0px 99px 80px 33px rgba(0, 0, 0, 0.51);
+      -moz-box-shadow: 0px 99px 80px 33px rgba(0, 0, 0, 0.51);
+    }
+
+    .empty-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 3.75rem;
+      border-bottom: 1px solid $border-color;
+      background-color: $very-dark-desaturated-blue;
+      color: $dark-grayish-blue;
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    .empty-list {
+      background-color: $very-dark-desaturated-blue;
+      color: $dark-grayish-blue;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding-inline: 20px;
+
+    &.dark {
+      background-image: url(../images/bg-mobile-dark.jpg);
+      background-color: $very-dark-blue;
+    }
+
+    &.light {
+      background-image: url(../images/bg-mobile-light.jpg);
+      background-color: $very-light-gray;
+    }
+  }
+
+  main {
+    margin-top: 2rem;
+    width: 100%;
+  }
+}

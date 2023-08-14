@@ -1,0 +1,68 @@
+@import "../../variables/variables";
+
+.form-control {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 0.5rem;
+  height: 60px;
+  margin-bottom: 1rem;
+
+  button {
+    min-height: 1.3rem;
+    min-width: 1.3rem;
+    margin-inline: 1.3rem;
+
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid $border-color;
+
+    &:hover {
+      border: 1px solid rgb(192, 88, 243);
+      transition: 0.3s;
+    }
+  }
+
+  form {
+    height: 100%;
+    width: 100%;
+
+    input {
+      height: 100%;
+      width: 90%;
+      background-color: transparent;
+      border: none;
+      font-weight: $fw-400;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-control {
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+
+    button {
+      min-height: 1rem;
+      min-width: 1rem;
+      margin-inline: 1rem;
+
+      background-color: transparent;
+      border-radius: 50%;
+      border: 1px solid $border-color;
+    }
+
+    form {
+      height: 100%;
+      width: 100%;
+
+      input {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}

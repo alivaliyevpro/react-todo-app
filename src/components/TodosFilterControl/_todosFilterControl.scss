@@ -1,0 +1,115 @@
+@import "../../variables/variables";
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 3.75rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+
+  span {
+    color: $dark-grayish-blue;
+    font-size: 0.8rem;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 50%;
+
+    button {
+      font-weight: $fw-700;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    color: $dark-grayish-blue;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $light-grayish-blue-hover;
+    }
+  }
+
+  .all {
+    color: $bright-blue;
+  }
+
+  .active {
+    color: $bright-blue;
+  }
+
+  .completed {
+    color: $bright-blue;
+  }
+}
+
+.controls-mobile {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .controls-container {
+    justify-content: space-between;
+
+    padding: 1rem;
+    height: 3rem;
+
+    span {
+      font-size: 0.7rem;
+    }
+
+    .controls {
+      display: none;
+    }
+
+    button {
+      font-size: 0.7rem;
+    }
+  }
+
+  .controls-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+
+    gap: 1rem;
+    height: 3rem;
+
+    button {
+      font-weight: $fw-700;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    color: $dark-grayish-blue;
+    border: none;
+    font-size: 0.8rem;
+    cursor: pointer;
+
+    &:hover {
+      color: $light-grayish-blue-hover;
+    }
+  }
+
+  .all {
+    color: $bright-blue;
+  }
+
+  .active {
+    color: $bright-blue;
+  }
+
+  .completed {
+    color: $bright-blue;
+  }
+}

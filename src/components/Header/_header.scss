@@ -1,0 +1,25 @@
+@import "../../variables/variables.scss";
+
+header {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+
+  h1 {
+    color: $very-light-gray;
+    letter-spacing: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: $very-light-gray;
+
+    img {
+      width: 1.1rem;
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@import "../../variables/variables";
+
+.todo {
+  display: flex;
+  align-items: center;
+  min-height: 3.75rem;
+  cursor: pointer;
+
+  button {
+    margin-inline: 1.3rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    border-radius: 50%;
+    min-height: 1.3rem;
+    min-width: 1.3rem;
+  }
+
+  button.checkbox.false {
+    background: transparent;
+    border: 1px solid $border-color;
+
+    img {
+      display: none;
+    }
+
+    &:hover {
+      border: 1px solid hsl(280, 87%, 65%);
+      transition: 0.3s;
+      img {
+        display: block;
+        color: hsl(280, 87%, 65%);
+      }
+    }
+  }
+
+  button.checkbox.true {
+    background: $check-background;
+
+    img {
+      border-radius: 50%;
+      height: 0.7rem;
+      width: 0.7rem;
+    }
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    p {
+      display: flex;
+      overflow: hidden;
+      align-items: center;
+      height: 100%;
+      max-width: 90%;
+      text-align: start;
+      margin-block: 1rem;
+
+      &.true {
+        text-decoration: line-through;
+      }
+
+      &.false {
+        text-decoration: none;
+      }
+    }
+
+    #delete {
+      display: none;
+    }
+  }
+
+  &:hover {
+    #delete {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todo {
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    cursor: pointer;
+
+    button {
+      margin-inline: 1rem;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .checkbox {
+      border-radius: 50%;
+      min-height: 1rem;
+      min-width: 1rem;
+    }
+
+    button.checkbox.false {
+      background: transparent;
+      border: 1px solid $border-color;
+
+      img {
+        display: none;
+      }
+
+      &:hover {
+        border: 1px solid hsl(280, 87%, 65%);
+        transition: 0.3s;
+        img {
+          display: block;
+          color: hsl(280, 87%, 65%);
+        }
+      }
+    }
+
+    button.checkbox.true {
+      background: $check-background;
+
+      img {
+        border-radius: 50%;
+        height: 0.5rem;
+        width: 0.5rem;
+      }
+    }
+
+    .flex {
+      display: flex;
+      align-items: center;
+      width: 100%;
+
+      p {
+        display: flex;
+        overflow: hidden;
+        align-items: center;
+        height: 100%;
+        max-width: 90%;
+        text-align: start;
+        margin-block: auto;
+        font-size: 0.9rem;
+        margin-block: 0.5rem;
+
+        &.true {
+          text-decoration: line-through;
+        }
+
+        &.false {
+          text-decoration: none;
+        }
+      }
+
+      #delete {
+        display: block;
+        width: 0.7rem;
+        height: 0.7rem;
+      }
+    }
+  }
+}

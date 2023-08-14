@@ -1,0 +1,28 @@
+@import "../../variables/variables";
+
+.todos-container {
+  .todos {
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+  .empty-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 3.75rem;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .todos-container {
+    .empty-list {
+      min-height: 3rem;
+      p {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
